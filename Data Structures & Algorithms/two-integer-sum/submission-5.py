@@ -1,0 +1,17 @@
+from collections import defaultdict
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = defaultdict(list)
+
+        for idx,val in enumerate(nums):
+            diff = target - val
+
+            if diff in seen:
+                return [seen[diff], idx]
+            else:
+                seen[val] = idx
+        
+
+            
+
+            
